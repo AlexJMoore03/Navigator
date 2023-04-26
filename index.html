@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="scripts/load-table.js"></script>
+<script type="text/javascript" src="scripts/table-interaction.js"></script>
+<script type="text/javascript" src="scripts/table-analysis.js"></script>
+<script type="text/javascript" src="scripts/bfs.js"></script>
+<script type="text/javascript" src="scripts/dijkstra.js"></script>
+<script type="text/javascript" src="scripts/aStar.js"></script>
+<h1>Navigator</h1>
+<form>
+    <label>Grid Width</label><br>
+    <input type="text" id="gridWidth" value = 20><br>
+    <label>Grid Height</label><br>
+    <input type="text" id="gridHeight" value = 20><br>
+</form>
+<button onClick = "loadTable()">Load Grid</button>
+<div class = "divider"></div>
+<button onClick = "setMode('1')">Road</button>
+<button onClick = "setMode('0')">Erase</button>
+<button onClick = "setMode('2')">Start</button>
+<button onClick = "setMode('3')">Finish</button>
+<div class = "divider"></div>
+<table id = "mainTable" class = "mainTable" onMouseDown="paint()" onMouseUp="unPaint()" onMouseLeave="unPaint()" draggable="false"></table>
+<div class = "divider"></div>
+<div class = "divider" id="error"></div>
+<div class = "divider"></div>
+<button onClick = "BFS(analyzeTable())">BFS</button>
+<button onClick = "dijkstra(analyzeTable())">Dijkstra</button>
+<button onClick = "aStar(analyzeTable())">A*</button><br>
+<label id = "stepsDisplay"></label><br>
+
+						

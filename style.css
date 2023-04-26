@@ -1,0 +1,11 @@
+.gridSquare {
+  width: 5px;
+  height: 5px;
+  background: black;
+}
+.mainTable {
+  border-spacing: 0;
+}
+.divider {
+  height: 10px;
+}
